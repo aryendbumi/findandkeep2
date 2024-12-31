@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 0 83% 60%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 0 83% 60%;
+    --radius: 0.75rem;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border scroll-smooth;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+  button {
+    @apply transition-all duration-200 active:scale-95;
+  }
+}
+
+.room-card {
+  @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+}
+
+.amenity-icon {
+  @apply w-4 h-4 text-gray-700;
+}
+
+/* Enhanced transitions */
+.collapsible-content {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+/* Improved fonts and contrast */
+h1, h2, h3, h4, h5, h6 {
+  @apply font-sans tracking-tight text-gray-900;
+}
+
+/* Smooth scrolling for elements */
+.scroll-container {
+  @apply scroll-smooth overflow-auto;
+}
+
+/* Enhanced button interactions */
+.button-hover {
+  @apply transition-all duration-200 hover:shadow-md active:scale-95;
+}
+
+/* Focus styles for better accessibility */
+:focus-visible {
+  @apply outline-2 outline-offset-2 outline-blue-600;
+}
+
+/* High contrast text for better readability */
+.text-high-contrast {
+  @apply text-gray-900;
+}
+
+.text-medium-contrast {
+  @apply text-gray-700;
+}
+
+.text-low-contrast {
+  @apply text-gray-600;
+}
